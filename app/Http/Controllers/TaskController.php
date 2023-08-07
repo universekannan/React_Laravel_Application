@@ -9,7 +9,9 @@ class TaskController extends Controller
   public function index(){
     $sql = "select * from tasks";
     $result = DB::select(DB::raw($sql));
-    return response()->json($result);
+    return response()->json([
+      'results' => $result
+ ],200);
   }
 
   public function store(Request $request){
