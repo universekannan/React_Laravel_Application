@@ -10,7 +10,7 @@ class TaskController extends Controller
     $sql = "select * from tasks";
     $result = DB::select(DB::raw($sql));
     return response()->json([
-      'results' => $result
+      'tasks' => $result
  ],200);
   }
 
